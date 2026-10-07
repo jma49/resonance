@@ -1,0 +1,85 @@
+// Bilingual text for the seven movements. Facts are kept to what the record supports;
+// descriptions paraphrase rather than quote.
+
+export const MOVEMENTS = [
+  {
+    id: 'prelude', roman: '序', years: '1952 — 2023',
+    cn: '一个音', en: 'A Single Tone',
+    dcn: '一个音被按下，然后开始消失。他用一生倾听这段消失。',
+    den: 'A note is struck and begins to vanish. He spent a lifetime listening to that vanishing.',
+    hcn: '轻触任意处，弹下一个音', hen: 'Tap anywhere to strike a note',
+    mat: 'Salamander Grand Piano · 真实录音波形 recorded waveform · Poly Haven “moonless golf” CC0',
+    grade: { exposure: 1.0, bloom: 0.9, threshold: 0.55, sat: 0.8, vignette: 0.75, grain: 0.07, ca: 0.002, contrast: 1.08, shadows: [0.92, 0.96, 1.05], highlights: [1.02, 1.0, 0.97] },
+  },
+  {
+    id: 'debussy', roman: 'I', years: '1952 — 1977',
+    cn: '德彪西的孩子', en: 'Debussy’s Child',
+    dcn: '生于东京。少年时迷恋德彪西；在东京艺术大学学习作曲，也钻研电子与民族音乐。',
+    den: 'Born in Tokyo. Devoted to Debussy as a boy; at Tokyo University of the Arts he studied composition, electronic and ethnic music.',
+    hcn: '轻触琴键演奏，和声会自动跟随', hen: 'Tap the keys; the harmony follows you',
+    mat: 'Poly Haven “Kiara 1 Dawn” CC0 · 反射于漆面 reflected in lacquer',
+    grade: { exposure: 1.0, bloom: 0.55, threshold: 0.9, sat: 0.92, vignette: 0.6, grain: 0.05, ca: 0.0018, contrast: 1.04, shadows: [0.96, 0.95, 1.03], highlights: [1.05, 1.0, 0.94] },
+  },
+  {
+    id: 'ymo', roman: 'II', years: '1978 — 1983',
+    cn: '黄色魔术', en: 'Yellow Magic',
+    dcn: '与细野晴臣、高桥幸宏组成黄色魔术交响乐团（YMO），合成器与音序器把东京的电子流行乐送往世界。',
+    den: 'With Haruomi Hosono and Yukihiro Takahashi he formed Yellow Magic Orchestra; synthesizers and sequencers carried Tokyo’s electropop worldwide.',
+    hcn: '轻触外圈 16 步音序器开关音符 · 上下拖动调滤波', hen: 'Tap the 16-step ring to toggle notes · drag up/down for filter',
+    mat: 'NASA Earth at Night (Black Marble) · 公有领域 public domain',
+    grade: { exposure: 1.05, bloom: 1.1, threshold: 0.6, sat: 1.05, vignette: 0.6, grain: 0.06, ca: 0.0035, contrast: 1.12, shadows: [0.95, 0.95, 1.08], highlights: [1.06, 0.98, 0.94] },
+  },
+  {
+    id: 'screen', roman: 'III', years: '1983 — 1990',
+    cn: '银幕上的旋律', en: 'Melodies for the Screen',
+    dcn: '《圣诞快乐，劳伦斯先生》《末代皇帝》《遮蔽的天空》。五声音阶的旋律在西方管弦乐里找到回声。',
+    den: 'Merry Christmas, Mr. Lawrence; The Last Emperor; The Sheltering Sky. Pentatonic lines found their echo in the orchestra.',
+    hcn: '拖动转动胶片 · 轻触画格奏出一句旋律', hen: 'Drag to turn the film · tap a frame for a phrase',
+    mat: 'Poly Haven “Quarry 01” 沙漠 desert CC0 · 画格取自 frames from Poly Haven CC0 panoramas',
+    grade: { exposure: 1.0, bloom: 0.75, threshold: 0.75, sat: 0.82, vignette: 0.7, grain: 0.09, ca: 0.0025, contrast: 1.1, shadows: [0.95, 0.92, 0.9], highlights: [1.08, 1.0, 0.86] },
+  },
+  {
+    id: 'casa', roman: 'IV', years: '2001',
+    cn: '家 · 波萨诺瓦', en: 'Casa · Bossa Nova',
+    dcn: '与莫雷伦鲍姆夫妇在里约热内卢若宾的故居，用若宾的钢琴录下《Casa》，向波萨诺瓦致意。',
+    den: 'With Jaques and Paula Morelenbaum he recorded Casa in Jobim’s house in Rio, on Jobim’s own piano.',
+    hcn: '划过琴弦扫弦 · 轻触水面拨一个音', hen: 'Swipe across the strings to strum · tap the water to pluck',
+    mat: 'Poly Haven “Venice Sunset” CC0 · 水面倒影 reflected in water · 尼龙弦吉他与大提琴采样 nylon guitar & cello samples',
+    grade: { exposure: 0.95, bloom: 0.5, threshold: 1.0, sat: 1.0, vignette: 0.65, grain: 0.05, ca: 0.002, contrast: 1.05, shadows: [0.94, 0.97, 1.04], highlights: [1.04, 0.98, 0.92] },
+  },
+  {
+    id: 'sine', roman: 'V', years: '2002 — 2007',
+    cn: '正弦与噪声', en: 'Sine and Noise',
+    dcn: '与阿尔瓦·诺托合作，钢琴被削减成稀疏的音符，与正弦波、电子噪音交错。寂静也是乐谱。',
+    den: 'With Alva Noto the piano was pared to sparse notes among sine tones and clicks. Silence is part of the score.',
+    hcn: '轻触发出脉冲 · 横向位置决定频率', hen: 'Tap to fire pulses · horizontal position sets frequency',
+    mat: 'Salamander Grand Piano A4 · 真实录音的频谱 spectrum of a real recording',
+    grade: { exposure: 1.0, bloom: 0.7, threshold: 0.7, sat: 0.0, vignette: 0.45, grain: 0.045, ca: 0.004, contrast: 1.15, shadows: [1, 1, 1], highlights: [1, 1, 1] },
+  },
+  {
+    id: 'nature', roman: 'VI', years: '2008 — 2017',
+    cn: '冰川 · 海啸 · 森林', en: 'Ice · Flood · Forest',
+    dcn: '北极圈的冰川融水；被海啸浸泡、由大自然重新调音的钢琴；《async》里每个声音按自己的时间呼吸。',
+    den: 'Meltwater in the Arctic; a piano drowned by the tsunami and retuned by nature; in async every sound keeps its own time.',
+    hcn: '轻触落下雨滴 · 长按：把水桶扣在头上听雨', hen: 'Tap to let rain fall · hold: listen to the rain through a bucket',
+    mat: 'NASA Blue Marble 格陵兰 Greenland · Poly Haven “Forest Slope” CC0',
+    grade: { exposure: 1.0, bloom: 0.6, threshold: 0.8, sat: 0.7, vignette: 0.7, grain: 0.07, ca: 0.0022, contrast: 1.06, shadows: [0.9, 0.97, 1.05], highlights: [0.98, 1.01, 1.03] },
+  },
+  {
+    id: 'twelve', roman: 'VII', years: '2023',
+    cn: '12', en: 'Ars longa, vita brevis',
+    dcn: '七十一岁生日那天发行的《12》，像一本声音日记。同年三月，他离开了。艺术长久，人生短暂。',
+    den: 'Released on his 71st birthday, 12 reads like a diary in sound. He died that March. Ars longa, vita brevis.',
+    hcn: '轻触十二道光环', hen: 'Touch the twelve rings',
+    mat: 'Poly Haven “Dikhololo Night” CC0 · 真实星空 real night sky',
+    grade: { exposure: 1.0, bloom: 0.85, threshold: 0.6, sat: 0.85, vignette: 0.7, grain: 0.06, ca: 0.002, contrast: 1.06, shadows: [0.9, 0.94, 1.08], highlights: [1.0, 0.99, 1.0] },
+  },
+];
+
+export const CREDITS = [
+  ['影像素材 Imagery', 'Poly Haven HDRI 全景（CC0）：Kiara 1 Dawn · Quarry 01 · Venice Sunset · Forest Slope · Dikhololo Night · Moonless Golf · Potsdamer Platz · San Giuseppe Bridge'],
+  ['地球影像 Earth', 'NASA Earth Observatory：Black Marble 夜间灯光 · Blue Marble（公有领域 public domain）'],
+  ['钢琴 Piano', 'Salamander Grand Piano — Alexander Holm（CC BY 3.0），via Tone.js audio'],
+  ['乐器 Instruments', '尼龙弦吉他、大提琴、小提琴采样 nylon guitar, cello, violin — tonejs-instruments, Nicholaus Brosowsky（CC BY 3.0）'],
+  ['音乐 Music', '全部为原创生成音乐，模仿各时期风格，不引用坂本龙一的旋律 · All music is original and generative, written in the manner of each period; no Sakamoto melodies are quoted'],
+];

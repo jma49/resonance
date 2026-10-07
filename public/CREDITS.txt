@@ -1,0 +1,16 @@
+余韵 Resonance — an interactive homage to Ryuichi Sakamoto (1952–2023)
+Unofficial tribute. Contains no recordings, likeness, artwork or scores of Ryuichi Sakamoto.
+All music is original and generated in the browser.
+
+Imagery
+- Poly Haven HDRIs (CC0): Kiara 1 Dawn, Quarry 01, Venice Sunset, Forest Slope, Dikhololo Night,
+  Moonless Golf, Potsdamer Platz, San Giuseppe Bridge — https://polyhaven.com
+- NASA Earth Observatory: Black Marble (Earth at Night), Blue Marble — public domain
+
+Sound
+- Salamander Grand Piano by Alexander Holm — CC BY 3.0 (via Tone.js audio)
+- Nylon guitar, cello, violin samples — tonejs-instruments by Nicholaus Brosowsky — CC BY 3.0
+  https://creativecommons.org/licenses/by/3.0/
+
+Code
+- three.js — MIT License (see THREE-LICENSE.txt)
