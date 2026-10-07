@@ -19,7 +19,7 @@ function filmAtlas(assets) {
 }
 
 const FILM_FS = /* glsl */`
-  uniform sampler2D atlas; uniform float time, scroll, nFrames, warm, glow; varying vec2 vUv; varying float vFade;
+  uniform sampler2D atlas; uniform float time, scroll, nFrames, warm, glow; varying vec2 vUv; varying float vFade; varying float vSY;
   float h(float x){ return fract(sin(x*91.7)*43758.5); }
   void main(){
     float u = vUv.x + scroll; float fi = floor(u); float fu = fract(u); float v = vUv.y;
@@ -39,6 +39,8 @@ const FILM_FS = /* glsl */`
     float hole = edge * step(0.3, pu) * step(pu, 0.7) * step(abs(v - (v < 0.5 ? 0.055 : 0.945)), 0.03);
     vec3 col = mix(base, img*glow, inImg) + hole*vec3(1.2, 1.05, 0.85)*glow*0.3;
     float a = (0.88 + 0.12*inImg) * vFade;
+    // keep the lower band calm so subtitles and captions stay readable
+    col *= mix(0.35, 1.0, smoothstep(-0.95, -0.42, vSY));
     gl_FragColor = vec4(col*vFade, 1.0);
   }`;
 
@@ -73,7 +75,7 @@ export class Screen extends Movement {
       const mat = new THREE.ShaderMaterial({
         side: THREE.DoubleSide,
         uniforms: { atlas: { value: this.atlas }, time: { value: 0 }, scroll: { value: 0 }, nFrames: { value: FRAMES.length }, warm: { value: 0.6 + k * 0.15 }, glow: { value: 0.95 } },
-        vertexShader: `varying vec2 vUv; varying float vFade; void main(){ vUv=uv; vec4 w=modelMatrix*vec4(position,1.0); vFade = 1.0 - smoothstep(9.0, 17.0, abs(w.x)); gl_Position=projectionMatrix*viewMatrix*w; }`,
+        vertexShader: `varying vec2 vUv; varying float vFade; varying float vSY; void main(){ vUv=uv; vec4 w=modelMatrix*vec4(position,1.0); vFade = 1.0 - smoothstep(9.0, 17.0, abs(w.x)); vec4 cp=projectionMatrix*viewMatrix*w; vSY = cp.y/cp.w; gl_Position=cp; }`,
         fragmentShader: FILM_FS,
       });
       const m = ribbon(curve, 1.9, 260, mat); m.userData.k = k; m.userData.len = curve.getLength();
